@@ -1,4 +1,4 @@
-// This file is intentionally left blank.// Mobile nav toggle + smooth scroll
+// Mobile nav toggle + smooth scroll
 (function(){
   const btn = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.main-nav');

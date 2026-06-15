@@ -82,6 +82,10 @@ body{
 .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;list-style:none;padding:0;margin:8px 0 0 0}
 .skills-grid li{background:#f3f5f6;padding:10px;border-radius:6px;text-align:center;font-weight:600;color:#333}
 
+/* Tech logos */
+.tech-logos{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:12px}
+.tech-logos img{width:56px;height:56px;padding:8px;background:#fff;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.06);object-fit:contain}
+
 /* Experience / jobs */
 .job{margin:12px 0}
 .job .meta{color:var(--muted);font-size:0.9rem;margin:6px 0}
@@ -130,6 +134,7 @@ a{color:var(--accent)}
   .cert-logos img{height:44px}
   .hero-visual{flex-direction:column-reverse;align-items:stretch}
   .hero-figure{margin:0 auto}
+  .tech-logos img{width:44px;height:44px;padding:6px}
 }
 
 /* Accessibility improvements */
