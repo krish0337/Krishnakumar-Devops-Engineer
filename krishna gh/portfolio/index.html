@@ -1,103 +1,150 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishnakumar P — DevOps Engineer</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Krishnakumar P — DevOps Engineer. Automation, CI/CD, AWS, Kubernetes, Docker.">
+  <link rel="icon" href="favicon.ico" />
+  <title>Krishnakumar P — Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <header>
-        <div class="hero">
-            <h1>Krishnakumar P</h1>
-            <p class="subtitle">DevOps Engineer — automation · CI/CD · cloud</p>
-            <p>
-                <a href="https://www.linkedin.com/in/krishnakumar-p-1a1827114/" target="_blank" rel="noopener">LinkedIn</a>
-                • <a href="resume.pdf" target="_blank">Download Resume</a>
-                • <a href="contact.html">Contact</a>
-            </p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Krishnakumar P</h1>
+        <p class="role">DevOps Engineer — automation · CI/CD · Cloud</p>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#hero">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <a class="resume" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="hero card">
+      <h2>Hi — I'm Krishnakumar</h2>
+      <p class="lead">DevOps Engineer focused on automation, CI/CD and reliable cloud infrastructure. I build pipelines, infrastructure-as-code and monitoring to speed software delivery.</p>
+      <p class="hero-links">
+        <a class="btn" href="https://www.linkedin.com/in/krishnakumar-p-1a1827114/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </p>
+    </section>
+
+    <section id="career-objectives" class="card">
+      <h3>CAREER OBJECTIVES</h3>
+      <p>To work with maximum potential in a challenging and dynamic environment, with an opportunity to work with diverse people and enhance my professional skills for career growth.</p>
+    </section>
+
+    <section id="professional-summary" class="card">
+      <h3>PROFESSIONAL SUMMARY</h3>
+      <ul class="summary-list">
+        <li>Overall 3+ years experience in Cloud & DevOps.</li>
+        <li>Jenkins: install/configure/maintain CI and end-to-end automation.</li>
+        <li>Docker & Kubernetes: containerization, image builds, Pod creation and troubleshooting.</li>
+        <li>Monitoring: Splunk, Grafana — dashboards & reports for logs.</li>
+        <li>AWS: EC2, IAM, EBS, S3, Lambda, CloudFront, RDS, Route53, CloudWatch, CloudFormation, EFS.</li>
+      </ul>
+    </section>
+
+    <section id="it-forte" class="card">
+      <h3>IT FORTE</h3>
+      <ul class="skills-grid">
+        <li>Git / GitHub</li>
+        <li>Docker, Kubernetes</li>
+        <li>Jenkins, JFrog</li>
+        <li>Apache, Tomcat</li>
+        <li>AWS (EC2, S3, Lambda, CloudFormation)</li>
+        <li>Splunk, Grafana</li>
+        <li>Shell / Python (beginner)</li>
+        <li>Jira, ITSM</li>
+      </ul>
+    </section>
+
+    <section id="experience" class="card">
+      <h3>PROFESSIONAL EXPERIENCE</h3>
+
+      <article class="job">
+        <h4>DevOps Engineer — Rakuten India</h4>
+        <p class="meta">Apr 2021 — Present</p>
+        <ul>
+          <li>Maintain GitHub repos, handle releases and branching; manage CI pipelines and deployments.</li>
+          <li>Built CI/CD pipelines using JFrog, GitHub, Jenkins and Kubernetes.</li>
+          <li>Implemented blue/green deployments; automated Jenkins via Groovy scripts.</li>
+          <li>AWS: AMI creation, EC2/EBS/S3/CloudWatch/Route53/CloudFront/Lambda management.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h4>AWS DevOps Engineer — CSS CORP (Client: Nokia)</h4>
+        <p class="meta">Oct 2019 — Apr 2021</p>
+        <ul>
+          <li>Automated deployments to DEV/QA from Jenkins, managed RedHat servers and Splunk monitoring.</li>
+          <li>Wrote Dockerfiles and configured automated image builds; used Maven for Java builds.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h4>System Administrator / Cloud Administrator — SBA Info Solutions</h4>
+        <p class="meta">Oct 2018 — Oct 2019</p>
+        <ul>
+          <li>Provisioned EC2, attached volumes, created EFS; installed Apache/Tomcat/MySQL and performed migrations to AWS.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="projects" class="card">
+      <h3>SELECTED PROJECTS</h3>
+      <div class="projects-grid">
+        <div class="project">
+          <h4>Rakuten-CDN / Rakuten Media Service</h4>
+          <p>CI/CD automation, container deployments and monitoring for media delivery services.</p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#skills">Skills</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="project">
+          <h4>Project — Add title</h4>
+          <p>Add short description and link to repo or demo.</p>
+        </div>
+      </div>
+    </section>
 
-    <main>
-        <section id="about">
-            <h2>About</h2>
-            <p>
-                Hi — I'm Krishna, a DevOps Engineer focused on automation, continuous integration, and reliable cloud infrastructure.
-                I help teams deliver software faster and more safely by building CI/CD pipelines, infrastructure-as-code, and observability.
-                (Edit this paragraph with a 2–3 sentence summary from your LinkedIn profile.)
-            </p>
-        </section>
+    <section id="certifications" class="card">
+      <h3>CERTIFICATIONS</h3>
+      <ul>
+        <li>AWS Certified Solutions Architect - Associate</li>
+        <li>Certified Kubernetes Administrator (CKA)</li>
+      </ul>
+    </section>
 
-        <section id="experience">
-            <h2>Experience (select highlights)</h2>
-            <article class="job">
-                <h3>Role Title — Company Name</h3>
-                <p class="meta">Location • Month YYYY — Present</p>
-                <ul>
-                    <li>Short bullet describing responsibility or achievement (CI/CD pipeline, automation, cost optimization).</li>
-                    <li>Another measurable result (reduced deploy time, improved availability, etc.).</li>
-                </ul>
-            </article>
+    <section id="education" class="card">
+      <h3>EDUCATION</h3>
+      <ul>
+        <li>B.E. (E.C.E) — Ramco Institute of Technology (2015 - 2018)</li>
+        <li>DECE — PACR Polytechnic College (2012 - 2015)</li>
+      </ul>
+    </section>
 
-            <article class="job">
-                <h3>Previous Role — Previous Company</h3>
-                <p class="meta">Location • Month YYYY — Month YYYY</p>
-                <ul>
-                    <li>Short bullet describing responsibility or achievement.</li>
-                </ul>
-            </article>
+    <section id="contact" class="card">
+      <h3>CONTACT</h3>
+      <p><strong>KRISHNAKUMAR P</strong></p>
+      <p>Email: <a href="mailto:krish0337@gmail.com">krish0337@gmail.com</a></p>
+      <p>Phone: +91-7904534770</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/krishnakumar-p-1a1827114/" target="_blank" rel="noopener noreferrer">krishnakumar-p</a></p>
+    </section>
+  </main>
 
-            <p><em>Replace the placeholders above with your real roles and dates from LinkedIn.</em></p>
-        </section>
+  <footer class="site-footer">
+    <div class="container"><p>© 2026 Krishnakumar P — DevOps Engineer</p></div>
+  </footer>
 
-        <section id="projects">
-            <h2>Selected Projects</h2>
-            <ul>
-                <li>
-                    <strong>Project Name 1</strong> — short description (technologies used, outcome).
-                    <div><a href="https://github.com/krish0337/project-repo" target="_blank">Source</a> • <a href="#">Live demo</a></div>
-                </li>
-                <li>
-                    <strong>Project Name 2</strong> — short description (infrastructure, automation, monitoring).
-                </li>
-            </ul>
-            <p><em>Link to GitHub repos or demos for each project.</em></p>
-        </section>
-
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <ul>
-                <li><strong>Certification Name</strong> — Issuer • Month YYYY</li>
-                <li><strong>Another Cert</strong> — Issuer • Month YYYY</li>
-            </ul>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <p>CI/CD, Jenkins/GitHub Actions, Docker, Kubernetes, Terraform, AWS/GCP, Ansible, Monitoring (Prometheus/Grafana), Scripting (Bash/Python)</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: your-email@example.com</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/krishnakumar-p-1a1827114/" target="_blank">krishnakumar-p</a></p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Krishnakumar P. All rights reserved.</p>
-    </footer>
-
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
