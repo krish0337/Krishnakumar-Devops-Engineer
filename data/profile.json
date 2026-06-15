@@ -1,0 +1,62 @@
+{
+  "name": "Krishnakumar P",
+  "title": "DevOps Engineer",
+  "summary": "A passionate DevOps Engineer with experience in cloud technologies, automation, and continuous integration/continuous deployment (CI/CD) practices.",
+  "contact": {
+    "email": "your_email@example.com",
+    "linkedin": "https://www.linkedin.com/in/krishnakumar-p-1a1827114/",
+    "github": "https://github.com/iamkrishnakumar"
+  },
+  "experience": [
+    {
+      "jobTitle": "DevOps Engineer",
+      "company": "Your Company Name",
+      "location": "City, Country",
+      "startDate": "Month Year",
+      "endDate": "Present",
+      "responsibilities": [
+        "Implemented CI/CD pipelines using Jenkins and GitHub Actions.",
+        "Managed cloud infrastructure on AWS and Azure.",
+        "Automated deployment processes using Terraform and Ansible."
+      ]
+    },
+    {
+      "jobTitle": "Systems Administrator",
+      "company": "Previous Company Name",
+      "location": "City, Country",
+      "startDate": "Month Year",
+      "endDate": "Month Year",
+      "responsibilities": [
+        "Maintained server infrastructure and ensured uptime.",
+        "Provided technical support and troubleshooting for users.",
+        "Implemented security measures and monitored system performance."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project Name 1",
+      "description": "Brief description of the project.",
+      "technologies": ["Technology 1", "Technology 2"],
+      "link": "https://github.com/yourusername/project1"
+    },
+    {
+      "name": "Project Name 2",
+      "description": "Brief description of the project.",
+      "technologies": ["Technology 1", "Technology 2"],
+      "link": "https://github.com/yourusername/project2"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Certification Name 1",
+      "issuingOrganization": "Organization Name",
+      "dateObtained": "Month Year"
+    },
+    {
+      "name": "Certification Name 2",
+      "issuingOrganization": "Organization Name",
+      "dateObtained": "Month Year"
+    }
+  ]
+}

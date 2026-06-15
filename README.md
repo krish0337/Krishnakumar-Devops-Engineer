@@ -1,42 +1,33 @@
-# krishnakumar-github-page
+# Krishnakumar's Portfolio
 
-Welcome to my GitHub Page! This repository showcases my professional profile and serves as a portfolio for my skills and experiences.
+Welcome to my portfolio! This project showcases my professional journey, skills, and accomplishments as a DevOps Engineer. Below is an overview of the structure and contents of this portfolio.
 
-## Project Overview
+## Project Structure
 
-This project is structured to provide a comprehensive view of my professional background, skills, and how to contact me. The main components of the project include:
-
-- **Landing Page**: The main HTML document (`src/index.html`) serves as the entry point to my profile.
-- **About Section**: Detailed information about my background, skills, and experiences can be found in `src/about.html`.
-- **Contact Section**: Visitors can find my contact information and a contact form in `src/contact.html`.
-- **Styling**: All styles are defined in `src/css/styles.css` to ensure a cohesive look and feel across the pages.
-- **Interactivity**: JavaScript functionality is implemented in `src/js/main.js` for any interactive features.
-- **Profile Data**: Structured data about my work experience, education, and skills is stored in `src/data/profile.json`.
+- **index.html**: The main landing page that provides an overview of my profile and links to other sections.
+- **about.html**: A brief introduction about me, summarizing my background and skills.
+- **experience.html**: A detailed list of my work experience, including roles, responsibilities, and achievements.
+- **projects.html**: A showcase of my projects, with descriptions, technologies used, and links to repositories or live demos.
+- **certifications.html**: A highlight of my certifications, including names, issuing organizations, and dates obtained.
+- **contact.html**: My contact information and a form for visitors to reach out.
+- **resume.pdf**: A downloadable PDF version of my resume.
+- **css/styles.css**: The stylesheet for the portfolio, defining layout, colors, and fonts.
+- **js/main.js**: JavaScript code for interactive features on the site.
+- **data/profile.json**: Structured data about my profile, used to dynamically populate the HTML pages.
+- **_config.yml**: Configuration settings for the project, especially if using a static site generator.
+- **CNAME**: File for setting up a custom domain for the GitHub Pages site.
+- **LICENSE**: Licensing terms for this portfolio project.
 
 ## Getting Started
 
-To get a local copy up and running, follow these simple steps:
-
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/krishnakumar-github-page.git
-   ```
-2. Navigate to the project directory:
-   ```
-   cd krishnakumar-github-page
-   ```
-3. Open the `src/index.html` file in your web browser to view the profile.
-
-## Usage
-
-Feel free to explore the different sections of my profile. You can learn more about my skills, experiences, and how to get in touch with me.
+To view the portfolio, you can visit [iamkrishnakumar.github.io/portfolio](https://iamkrishnakumar.github.io/portfolio). 
 
 ## Contributing
 
-If you would like to contribute to this project, please fork the repository and submit a pull request with your changes.
+Feel free to fork the repository and make any contributions or suggestions. 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the LICENSE file for more details. 
 
-Thank you for visiting my GitHub Page!
+Thank you for visiting my portfolio!
