@@ -1,0 +1,52 @@
+{
+  "name": "Krishna Kumar P",
+  "title": "Software Developer",
+  "summary": "Passionate software developer with experience in building web applications and a strong foundation in programming principles.",
+  "skills": [
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "React",
+    "Node.js",
+    "Python"
+  ],
+  "experience": [
+    {
+      "jobTitle": "Frontend Developer",
+      "company": "Tech Solutions Inc.",
+      "location": "City, Country",
+      "startDate": "2021-01-01",
+      "endDate": "2022-12-31",
+      "responsibilities": [
+        "Developed user-friendly web applications using React.",
+        "Collaborated with designers to implement responsive designs.",
+        "Optimized applications for maximum speed and scalability."
+      ]
+    },
+    {
+      "jobTitle": "Intern Software Developer",
+      "company": "Innovatech",
+      "location": "City, Country",
+      "startDate": "2020-06-01",
+      "endDate": "2020-12-31",
+      "responsibilities": [
+        "Assisted in the development of internal tools using JavaScript.",
+        "Participated in code reviews and team meetings.",
+        "Learned best practices in software development."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Technology in Computer Science",
+      "institution": "University Name",
+      "location": "City, Country",
+      "graduationYear": 2020
+    }
+  ],
+  "contact": {
+    "email": "krishnakumar@example.com",
+    "linkedin": "https://www.linkedin.com/in/krishnakumar-p-1a1827114/",
+    "github": "https://github.com/your-github-username"
+  }
+}
