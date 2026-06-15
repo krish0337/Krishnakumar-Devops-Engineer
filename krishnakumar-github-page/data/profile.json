@@ -1,0 +1,46 @@
+{
+  "name": "Krishnakumar P",
+  "title": "DevOps Engineer",
+  "linkedin": "https://www.linkedin.com/in/krishnakumar-p-1a1827114/",
+  "skills": [
+    "DevOps",
+    "Cloud Computing",
+    "CI/CD",
+    "Containerization",
+    "Automation",
+    "Scripting"
+  ],
+  "experience": [
+    {
+      "jobTitle": "DevOps Engineer",
+      "company": "XYZ Corp",
+      "duration": "2021 - Present",
+      "responsibilities": [
+        "Implemented CI/CD pipelines using Jenkins.",
+        "Managed cloud infrastructure on AWS.",
+        "Automated deployment processes using Docker and Kubernetes."
+      ]
+    },
+    {
+      "jobTitle": "Systems Administrator",
+      "company": "ABC Inc.",
+      "duration": "2019 - 2021",
+      "responsibilities": [
+        "Maintained server infrastructure and ensured uptime.",
+        "Configured and managed network services.",
+        "Provided technical support to end-users."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Technology in Computer Science",
+      "institution": "University of Technology",
+      "year": "2018"
+    }
+  ],
+  "contact": {
+    "email": "krishnakumar@example.com",
+    "phone": "+1234567890"
+  }
+}
