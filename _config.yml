@@ -1,7 +1,7 @@
 title: "Krishnakumar's Portfolio"
 description: "A portfolio showcasing the work and achievements of Krishnakumar, a DevOps Engineer."
-baseurl: ""
-url: "https://iamkrishnakumar.github.io/portfolio"
+baseurl: "/Krishnakumar-Devops-Engineer"
+url: "https://krish0337.github.io"
 theme: "minimal"
 markdown: kramdown
 permalink: pretty
