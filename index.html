@@ -1,38 +1,226 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishnakumar's Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Krishnakumar P — DevOps Engineer. CI/CD, Kubernetes, Docker, AWS, Terraform, Ansible.">
+  <link rel="icon" href="favicon.ico" />
+  <title>Krishnakumar P — DevOps Engineer</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="certifications.html">Certifications</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="resume.pdf" target="_blank">Download Resume</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>Hi, I'm Krishnakumar, a DevOps Engineer with a passion for automation and continuous integration. I have experience in various tools and technologies that help streamline development processes.</p>
-        </section>
-        <section>
-            <h2>Latest Projects</h2>
-            <p>Check out my projects to see the work I've done and the technologies I've used.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Krishnakumar P. All rights reserved.</p>
-    </footer>
-    <script src="js/main.js"></script>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Krishnakumar P</h1>
+        <p class="role">DevOps Engineer</p>
+        <p class="contact-inline">+91-9750882591 • <a href="mailto:krish0337@gmail.com">krish0337@gmail.com</a> • Work Exp: 6 years</p>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#hero">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#awards">Awards</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+        <a class="resume" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO (visual) -->
+    <section id="hero" class="hero card hero-visual">
+      <div class="hero-content">
+        <h2>Hi — I'm Krishnakumar</h2>
+        <p class="lead">
+          DevOps Engineer focused on automation, CI/CD and reliable cloud infrastructure.
+          I build pipelines, infrastructure-as-code and monitoring to speed software delivery.
+        </p>
+        <p class="hero-links">
+          <a class="btn" href="https://www.linkedin.com/in/krishnakumar-p-1a1827114/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </p>
+      </div>
+
+      <div class="hero-figure">
+        <div class="frame">
+          <img src="assets/krishnaprofile.jfif" alt="Krishnakumar P" class="profile-photo" />
+          <div class="badge badge--right">
+            <svg width="88" height="36" viewBox="0 0 88 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect rx="18" width="88" height="36" fill="#222" fill-opacity="0.95"/>
+              <text x="44" y="22" text-anchor="middle" font-size="11" fill="#fff" font-family="Segoe UI, Arial">Kubernetes</text>
+            </svg>
+          </div>
+          <div class="badge badge--bottom-left">
+            <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect rx="20" width="120" height="40" fill="#fff"/>
+              <text x="60" y="25" text-anchor="middle" font-size="13" fill="#2f4550" font-family="Segoe UI, Arial">CI · CD · AWS</text>
+            </svg>
+          </div>
+        </div>
+        <div class="frame frame--shadow" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- Career objectives -->
+    <section id="career-objectives" class="card">
+      <h3>CAREER OBJECTIVES</h3>
+      <p>To work with maximum potential in a challenging and dynamic environment, with opportunity to work with diverse people and enhance my professional skills for career growth.</p>
+    </section>
+
+    <!-- Professional summary -->
+    <section id="professional-summary" class="card">
+      <h3>PROFESSIONAL SUMMARY</h3>
+      <ul class="summary-list">
+        <li>6+ years experience as Cloud &amp; DevOps Engineer.</li>
+        <li>Jenkins: install, configure, maintain CI and end-to-end automation of builds &amp; deployments.</li>
+        <li>Docker &amp; Kubernetes: containerization, image builds, Pod creation and troubleshooting.</li>
+        <li>Monitoring: Splunk, Grafana — dashboards &amp; reports for logs.</li>
+        <li>AWS: EC2, IAM, EBS, S3, Lambda, CloudFront, RDS, Route53, CloudWatch, CloudFormation, EFS.</li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="card">
+      <h3>SKILLS &amp; ABILITIES</h3>
+      <ul class="skills-grid">
+        <li>Linux, Windows, macOS</li>
+        <li>Git, Pip</li>
+        <li>Jenkins, AWS CodeBuild, GCP Cloud Build</li>
+        <li>Ansible, Terraform</li>
+        <li>Docker, Kubernetes</li>
+        <li>Shell, Python (beginner)</li>
+        <li>AWS, GCP</li>
+        <li>Prometheus, Grafana, Splunk</li>
+      </ul>
+
+      <div class="tech-logos" aria-hidden="false">
+        <img src="assets/docker.svg" alt="Docker" />
+        <img src="assets/kubernetes.svg" alt="Kubernetes" />
+        <img src="assets/jenkins.svg" alt="Jenkins" />
+        <img src="assets/terraform.svg" alt="Terraform" />
+        <img src="assets/aws.svg" alt="AWS" />
+        <img src="assets/github.svg" alt="GitHub" />
+        <img src="assets/grafana.svg" alt="Grafana" />
+        <img src="assets/prometheus.svg" alt="Prometheus" />
+        <img src="assets/splunk.svg" alt="Splunk" />
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="card">
+      <h3>WORK EXPERIENCE</h3>
+
+      <article class="job">
+        <h4>Consultant — Deloitte (Client: DEP)</h4>
+        <p class="meta">May 2022 — Present</p>
+        <ul>
+          <li>Kubernetes: managed containerized apps, ConfigMaps, Services and pods; cert-manager for TLS automation.</li>
+          <li>Automation: Terraform, Ansible and Bash scripts; created modules to provision AWS resources (EC2, VPC, IAM, ELB, SG).</li>
+          <li>CI/CD: Jenkins pipelines (Jenkinsfile), artifact storage to JFrog; automated microservice deployments.</li>
+          <li>Infrastructure housekeeping scripts for snapshot/volume cleanup and decommissioning environments.</li>
+          <li>Authored CODEOWNERS and designed 3-tier security reference architecture diagrams.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h4>DevOps Engineer — Rakuten India (Rakuten-CDN / Rakuten Media Service)</h4>
+        <p class="meta">Apr 2021 — May 2022</p>
+        <ul>
+          <li>Maintained GitHub repos, releases and branching; created and maintained CI pipelines and deployments.</li>
+          <li>Built CI/CD pipelines using JFrog, GitHub, Jenkins and Kubernetes; implemented blue/green deployments.</li>
+          <li>Managed AWS resources: AMI creation, EC2, EBS, S3, CloudWatch, CloudFront, IAM, Route53, Lambda.</li>
+          <li>Created Groovy scripts to automate Jenkins jobs; performed weekly/on-call production deployments.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h4>AWS DevOps Engineer — CSS CORP</h4>
+        <p class="meta">Oct 2019 — Apr 2021</p>
+        <ul>
+          <li>Automated deployments to DEV/QA using Jenkins; wrote Dockerfiles and configured automated image builds.</li>
+          <li>Managed RedHat production servers, Splunk administration and monitoring.</li>
+          <li>AWS: CloudFormation, EC2, IAM, S3, Lambda, EBS management.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h4>Engineer — SBA Info Solutions</h4>
+        <p class="meta">Oct 2018 — Oct 2019</p>
+        <ul>
+          <li>Provisioned EC2 instances, attached EBS volumes, configured EFS; installed Apache/Tomcat/MySQL.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="card">
+      <h3>PROJECTS (selected)</h3>
+      <div class="projects-grid">
+        <div class="project">
+          <h4>Rakuten-CDN / Rakuten Media Service</h4>
+          <p>CI/CD automation, container deployments and monitoring for media delivery services.</p>
+        </div>
+        <div class="project">
+          <h4>Automation &amp; Infra Cleanup Tools</h4>
+          <p>Scripts to manage snapshot/volume cleanup and environment decommissioning; Terraform modules for AWS infra.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards" class="card">
+      <h3>Awards &amp; Recognition</h3>
+      <ul>
+        <li>Received "Applause" &amp; "Outstanding" awards from Leadership management.</li>
+        <li>Appreciated by clients for automating infrastructure tasks and reducing manual effort.</li>
+      </ul>
+    </section>
+
+    <section id="education" class="card">
+      <h3>EDUCATION</h3>
+      <ul>
+        <li>Bachelor of Engineering — Electronics &amp; Communication Engineering, RIT College, Rajapalayam</li>
+      </ul>
+    </section>
+
+    <section id="certifications" class="card">
+      <h3>TRAININGS &amp; CERTIFICATIONS</h3>
+
+      <div class="cert-logos">
+        <a href="https://www.aws.training/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/aws-certified.png" alt="AWS Certified Solutions Architect - Associate" />
+        </a>
+        <a href="https://www.cncf.io/certification/cka/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/cka.png" alt="Certified Kubernetes Administrator (CKA)" />
+        </a>
+      </div>
+
+      <ul class="cert-list">
+        <li>AWS Certified Solutions Architect — Associate</li>
+        <li>Certified Kubernetes Administrator (CKA)</li>
+        <li>Terraform Certified Associate</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h3>CONTACT</h3>
+      <p><strong>KRISHNAKUMAR P</strong></p>
+      <p>Email: <a href="mailto:krish0337@gmail.com">krish0337@gmail.com</a></p>
+      <p>Phone: +91-9750882591</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/krishnakumar-p-1a1827114/" target="_blank" rel="noopener noreferrer">krishnakumar-p</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>© 2026 Krishnakumar P — DevOps Engineer</p></div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
