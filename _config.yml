@@ -5,7 +5,7 @@ url: "https://iamkrishnakumar.github.io/portfolio"
 theme: "minimal"
 markdown: kramdown
 permalink: pretty
-exclude: ["README.md", "LICENSE", "CNAME", "resume.pdf"]
+exclude: ["README.md", "LICENSE", "CNAME", "resume.pdf", "node_modules", ".git", ".gitignore", "package.json", "package-lock.json"]
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
