@@ -558,6 +558,53 @@
 			animation-delay:-7s;
 		}
 
+		.tech-bg{
+			position:fixed;
+			inset:0;
+			pointer-events:none;
+			z-index:0;
+			overflow:hidden;
+		}
+
+		.tech-chip{
+			position:absolute;
+			display:inline-flex;
+			align-items:center;
+			justify-content:center;
+			padding:7px 12px;
+			border-radius:999px;
+			font-size:.82rem;
+			font-weight:700;
+			letter-spacing:.04em;
+			text-transform:uppercase;
+			color:#86e7ff;
+			background:rgba(8, 21, 36, .55);
+			border:1px solid rgba(134, 231, 255, .25);
+			box-shadow:0 0 18px rgba(34, 211, 238, .16);
+			opacity:.25;
+			animation:techDrift 16s linear infinite;
+		}
+
+		.tech-chip::before{
+			content:"☁";
+			margin-right:6px;
+			opacity:.8;
+		}
+
+		.tech-chip:nth-child(1){ left:6%; top:86%; animation-delay:0s }
+		.tech-chip:nth-child(2){ left:18%; top:74%; animation-delay:-3s }
+		.tech-chip:nth-child(3){ left:33%; top:90%; animation-delay:-7s }
+		.tech-chip:nth-child(4){ left:50%; top:82%; animation-delay:-10s }
+		.tech-chip:nth-child(5){ left:67%; top:88%; animation-delay:-13s }
+		.tech-chip:nth-child(6){ left:82%; top:79%; animation-delay:-5s }
+
+		@keyframes techDrift{
+			0%{ transform:translateY(0) translateX(0) scale(1); opacity:.16 }
+			20%{ opacity:.26 }
+			50%{ transform:translateY(-220px) translateX(12px) scale(1.06); opacity:.3 }
+			100%{ transform:translateY(-460px) translateX(-8px) scale(1); opacity:0 }
+		}
+
 		@keyframes drift{
 			0%{transform:translate(0,0) scale(1)}
 			50%{transform:translate(24px,-18px) scale(1.08)}
@@ -631,6 +678,15 @@
 		.reveal.reveal-in{
 			opacity:1;
 			transform:translateY(0);
+		}
+
+		header,
+		main,
+		footer,
+		.back-to-top,
+		.intro-gate{
+			position:relative;
+			z-index:2;
 		}
 
 		.back-to-top{
@@ -831,6 +887,10 @@
 			#experience .job{
 				padding:16px;
 			}
+			.tech-chip{
+				font-size:.72rem;
+				padding:6px 10px;
+			}
 		}
 
 		@media (max-width:520px){
@@ -843,7 +903,7 @@
 		}
 
 		@media (prefers-reduced-motion: reduce){
-			.bg-orb,.reveal,.intro-gate,.back-to-top{animation:none!important;transition:none!important}
+			.bg-orb,.reveal,.intro-gate,.back-to-top,.tech-chip{animation:none!important;transition:none!important}
 		}
 	</style>
 </head>
@@ -851,6 +911,14 @@
 	<div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
 	<div class="bg-orb bg-orb--one" aria-hidden="true"></div>
 	<div class="bg-orb bg-orb--two" aria-hidden="true"></div>
+	<div class="tech-bg" aria-hidden="true">
+		<span class="tech-chip">AWS</span>
+		<span class="tech-chip">Kubernetes</span>
+		<span class="tech-chip">Terraform</span>
+		<span class="tech-chip">CI/CD</span>
+		<span class="tech-chip">Docker</span>
+		<span class="tech-chip">GitOps</span>
+	</div>
 
 	<div id="introGate" class="intro-gate" aria-label="Intro screen">
 		<div class="intro-panel">
