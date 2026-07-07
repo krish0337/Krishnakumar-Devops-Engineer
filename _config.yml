@@ -1,11 +1,11 @@
 title: "Krishnakumar's Portfolio"
 description: "A portfolio showcasing the work and achievements of Krishnakumar, a DevOps Engineer."
-baseurl: "/Krishnakumar-Devops-Engineer"
-url: "https://krish0337.github.io"
+baseurl: ""
+url: "https://iamkrishnakumar.github.io/portfolio"
 theme: "minimal"
 markdown: kramdown
 permalink: pretty
-exclude: ["README.md", "LICENSE", "CNAME", "resume.pdf", "node_modules", ".git", ".gitignore", "package.json", "package-lock.json"]
+exclude: ["README.md", "LICENSE", "CNAME", "resume.pdf"]
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
