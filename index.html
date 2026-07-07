@@ -240,17 +240,43 @@
 		.job{margin:14px 0}
 		.job .meta{color:var(--muted);margin:5px 0 8px}
 
-		.projects-grid{
-			display:grid;
-			grid-template-columns:repeat(2,minmax(0,1fr));
+		.cert-list li{
+			display:flex;
+			align-items:center;
 			gap:12px;
+			margin:12px 0;
+			padding:12px;
+			background:linear-gradient(135deg,#e8f5ff 0%,#f0faff 100%);
+			border-left:4px solid var(--accent);
+			border-radius:8px;
+			opacity:0;
+			animation:certReveal .6s ease forwards;
 		}
 
-		.project{
-			background:#f9fbfd;
-			border:1px solid #e8edf3;
-			border-radius:10px;
-			padding:14px;
+		.cert-list li::before{
+			content:'🏆';
+			font-size:1.4rem;
+			flex-shrink:0;
+			animation:certBounce .8s ease infinite;
+		}
+
+		.cert-list li:nth-child(1){ animation-delay:.1s }
+		.cert-list li:nth-child(2){ animation-delay:.3s }
+		.cert-list li:nth-child(3){ animation-delay:.5s }
+
+		.cert-list li:hover{
+			transform:translateX(8px);
+			box-shadow:0 4px 12px rgba(47,69,80,.1);
+		}
+
+		@keyframes certReveal{
+			from{ opacity:0; transform:translateX(-20px) }
+			to{ opacity:1; transform:translateX(0) }
+		}
+
+		@keyframes certBounce{
+			0%,100%{ transform:scale(1) }
+			50%{ transform:scale(1.2) }
 		}
 
 		.site-footer{
@@ -500,7 +526,7 @@
 			.nav-toggle{display:block}
 			.hero-figure{width:300px;height:380px}
 			.frame,.frame--shadow{width:290px;height:380px}
-			.projects-grid{grid-template-columns:1fr}
+			.cert-list li::before{ font-size:1.2rem }
 			.skills-grid{grid-template-columns:1fr}
 		}
 
@@ -545,7 +571,7 @@
 			<nav class="main-nav" aria-label="Main navigation">
 				<a href="#hero">About</a>
 				<a href="#experience">Experience</a>
-				<a href="#projects">Projects</a>
+
 				<a href="#skills">Skills</a>
 				<a href="#awards">Awards</a>
 				<a href="#education">Education</a>
@@ -658,20 +684,6 @@
 					<li>Configured Apache, Tomcat, MySQL, and SSL certificates for multiple environments.</li>
 				</ul>
 			</article>
-		</section>
-
-		<section id="projects" class="card">
-			<h3>PROJECTS (SELECTED)</h3>
-			<div class="projects-grid">
-				<div class="project">
-					<h4>Rakuten-CDN / Rakuten Media Service</h4>
-					<p>CI/CD automation, containerized deployments, and production monitoring for media delivery workloads.</p>
-				</div>
-				<div class="project">
-					<h4>Automation and Infra Cleanup Tools</h4>
-					<p>Automation scripts and IaC modules for snapshot/volume cleanup and safe environment decommissioning on AWS.</p>
-				</div>
-			</div>
 		</section>
 
 		<section id="awards" class="card">
