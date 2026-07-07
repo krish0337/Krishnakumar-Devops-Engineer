@@ -1,195 +1,730 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Krishnakumar P - Senior DevOps Engineer. AWS, Kubernetes, CI/CD, Terraform, Ansible, GitHub Actions." />
-  <meta name="theme-color" content="#2f4550" />
-  <link rel="icon" href="favicon.ico" />
-  <title>Krishnakumar P | Senior DevOps Engineer</title>
-  <link rel="stylesheet" href="css/styles.css" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<meta name="description" content="Krishnakumar P - Senior DevOps Engineer. AWS, Kubernetes, CI/CD, Terraform, Ansible, GitHub Actions." />
+	<meta name="theme-color" content="#2f4550" />
+	<title>Krishnakumar P | Senior DevOps Engineer</title>
+	<style>
+		:root{
+			--accent:#2f4550;
+			--accent-2:#1f3440;
+			--muted:#6b6b6b;
+			--bg:#f3f5f7;
+			--card:#ffffff;
+			--max-width:1100px;
+			--radius:12px;
+		}
+
+		*{box-sizing:border-box}
+		html,body{height:100%}
+		body{
+			margin:0;
+			font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+			color:#1f2933;
+			background:var(--bg);
+			line-height:1.5;
+			-webkit-font-smoothing:antialiased;
+			overflow-x:hidden;
+		}
+
+		.container{
+			max-width:var(--max-width);
+			margin:0 auto;
+			padding:20px;
+		}
+
+		.site-header{
+			background:var(--accent);
+			color:#fff;
+			position:sticky;
+			top:0;
+			z-index:100;
+			box-shadow:0 6px 18px rgba(0,0,0,.12);
+		}
+
+		.header-inner{
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			gap:16px;
+			padding:10px 0;
+		}
+
+		.brand h1{
+			margin:0;
+			font-size:2rem;
+			letter-spacing:.2px;
+			white-space:nowrap;
+		}
+
+		.role{
+			margin:2px 0 0 0;
+			opacity:.96;
+			font-size:1.02rem;
+			font-weight:600;
+		}
+
+		.contact-inline{
+			margin:4px 0 0 0;
+			font-size:1rem;
+			opacity:.95;
+		}
+
+		.contact-inline a{color:#e7f5ff;text-decoration:underline}
+
+		.nav-toggle{
+			display:none;
+			border:0;
+			background:transparent;
+			color:#fff;
+			font-size:22px;
+			cursor:pointer;
+			padding:8px 10px;
+			border-radius:8px;
+		}
+
+		.main-nav{
+			display:flex;
+			gap:14px;
+			align-items:center;
+			flex-wrap:wrap;
+			justify-content:flex-end;
+		}
+
+		.main-nav a{
+			color:#fff;
+			text-decoration:none;
+			padding:8px 10px;
+			border-radius:8px;
+			font-weight:600;
+			font-size:1rem;
+			transition:background .2s ease, transform .2s ease;
+		}
+
+		.main-nav a:hover{
+			background:rgba(255,255,255,.1);
+			transform:translateY(-1px);
+		}
+
+		.main-nav .resume{
+			background:#fff;
+			color:var(--accent);
+			font-weight:700;
+			padding:10px 14px;
+		}
+
+		.hero{
+			background:var(--card);
+			padding:28px;
+			border-radius:var(--radius);
+			margin:20px 0 14px;
+			box-shadow:0 8px 24px rgba(0,0,0,.06);
+		}
+
+		.hero-visual{
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			gap:26px;
+			flex-wrap:wrap;
+		}
+
+		.hero-content{flex:1;min-width:280px}
+		.hero h2{
+			margin:0 0 10px 0;
+			font-size:2.1rem;
+			line-height:1.2;
+		}
+
+		.lead{
+			color:#3d4b59;
+			max-width:760px;
+			margin:0 0 14px 0;
+			font-size:1.2rem;
+		}
+
+		.hero-links .btn{
+			display:inline-block;
+			background:var(--accent);
+			color:#fff;
+			text-decoration:none;
+			padding:10px 15px;
+			border-radius:8px;
+			margin-right:8px;
+			margin-bottom:8px;
+			font-weight:700;
+			transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+		}
+
+		.hero-links .btn:hover{
+			background:var(--accent-2);
+			transform:translateY(-2px);
+			box-shadow:0 8px 20px rgba(47,69,80,.3);
+		}
+
+		.hero-figure{
+			position:relative;
+			width:360px;
+			min-width:260px;
+			height:430px;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+		}
+
+		.frame{
+			position:relative;
+			width:340px;
+			height:430px;
+			border-radius:18px;
+			overflow:hidden;
+			background:linear-gradient(180deg,#f7f8f9,#fff);
+			box-shadow:0 18px 40px rgba(47,69,80,.22);
+			z-index:2;
+		}
+
+		.frame--shadow{
+			position:absolute;
+			right:-8px;
+			top:12px;
+			width:340px;
+			height:430px;
+			border-radius:18px;
+			filter:blur(16px);
+			opacity:.35;
+			box-shadow:0 30px 70px rgba(47,69,80,.35);
+			z-index:1;
+		}
+
+		.profile-photo{
+			display:block;
+			width:100%;
+			height:100%;
+			object-fit:cover;
+		}
+
+		.card{
+			background:var(--card);
+			border-radius:var(--radius);
+			padding:18px;
+			margin:14px 0;
+			box-shadow:0 8px 22px rgba(0,0,0,.05);
+		}
+
+		.card h3{
+			margin:0 0 12px;
+			letter-spacing:.2px;
+		}
+
+		.summary-list li{margin:8px 0}
+
+		.skills-grid{
+			list-style:none;
+			margin:0;
+			padding:0;
+			display:grid;
+			grid-template-columns:repeat(2,minmax(0,1fr));
+			gap:10px;
+		}
+
+		.skills-grid li{
+			background:#f4f7fa;
+			border:1px solid #e7edf3;
+			border-radius:10px;
+			padding:10px 12px;
+			font-weight:600;
+		}
+
+		.job{margin:14px 0}
+		.job .meta{color:var(--muted);margin:5px 0 8px}
+
+		.projects-grid{
+			display:grid;
+			grid-template-columns:repeat(2,minmax(0,1fr));
+			gap:12px;
+		}
+
+		.project{
+			background:#f9fbfd;
+			border:1px solid #e8edf3;
+			border-radius:10px;
+			padding:14px;
+		}
+
+		.site-footer{
+			margin-top:18px;
+			background:var(--accent);
+			color:#fff;
+			text-align:center;
+			padding:16px 0;
+		}
+
+		a{color:var(--accent)}
+
+		.scroll-progress{
+			position:fixed;
+			top:0;
+			left:0;
+			height:3px;
+			width:0%;
+			z-index:1200;
+			background:linear-gradient(90deg,#ffb347,#4ecdc4);
+			box-shadow:0 0 10px rgba(78,205,196,.6);
+		}
+
+		.bg-orb{
+			position:fixed;
+			border-radius:50%;
+			filter:blur(70px);
+			z-index:-1;
+			pointer-events:none;
+			opacity:.23;
+			animation:drift 18s ease-in-out infinite;
+		}
+
+		.bg-orb--one{
+			width:320px;
+			height:320px;
+			top:-70px;
+			right:-70px;
+			background:#5bc0be;
+		}
+
+		.bg-orb--two{
+			width:260px;
+			height:260px;
+			bottom:4%;
+			left:-60px;
+			background:#f6bd60;
+			animation-delay:-7s;
+		}
+
+		@keyframes drift{
+			0%{transform:translate(0,0) scale(1)}
+			50%{transform:translate(24px,-18px) scale(1.08)}
+			100%{transform:translate(0,0) scale(1)}
+		}
+
+		.intro-gate{
+			position:fixed;
+			inset:0;
+			z-index:1300;
+			display:grid;
+			place-items:center;
+			background:
+				radial-gradient(circle at 20% 20%, rgba(91,192,190,.26), transparent 35%),
+				radial-gradient(circle at 80% 70%, rgba(246,189,96,.2), transparent 35%),
+				#0f202b;
+			transition:opacity .55s ease, visibility .55s ease;
+		}
+
+		.intro-gate.is-hidden{
+			opacity:0;
+			visibility:hidden;
+			pointer-events:none;
+		}
+
+		.intro-panel{
+			width:min(680px,92vw);
+			background:rgba(255,255,255,.08);
+			border:1px solid rgba(255,255,255,.22);
+			border-radius:18px;
+			padding:28px 24px;
+			color:#fff;
+			backdrop-filter:blur(8px);
+			box-shadow:0 12px 35px rgba(0,0,0,.35);
+		}
+
+		.intro-kicker{
+			margin:0 0 10px;
+			letter-spacing:.08em;
+			text-transform:uppercase;
+			font-size:.8rem;
+			opacity:.86;
+		}
+
+		.intro-title{
+			margin:0;
+			font-size:clamp(1.6rem,4vw,2.5rem);
+			min-height:1.35em;
+		}
+
+		.intro-sub{margin:10px 0 20px;opacity:.93}
+
+		.intro-enter{
+			border:0;
+			border-radius:10px;
+			padding:10px 16px;
+			font-weight:700;
+			cursor:pointer;
+			color:#14313c;
+			background:#f8f9fa;
+		}
+
+		.intro-enter:hover{transform:translateY(-1px)}
+
+		.reveal{
+			opacity:0;
+			transform:translateY(18px);
+			transition:opacity .55s ease, transform .55s ease;
+		}
+
+		.reveal.reveal-in{
+			opacity:1;
+			transform:translateY(0);
+		}
+
+		.back-to-top{
+			position:fixed;
+			right:18px;
+			bottom:18px;
+			width:42px;
+			height:42px;
+			border:0;
+			border-radius:50%;
+			cursor:pointer;
+			color:#fff;
+			background:#2f4550;
+			box-shadow:0 8px 22px rgba(0,0,0,.25);
+			z-index:1000;
+			opacity:0;
+			transform:translateY(10px);
+			pointer-events:none;
+			transition:opacity .25s ease, transform .25s ease;
+		}
+
+		.back-to-top.show{
+			opacity:1;
+			transform:translateY(0);
+			pointer-events:auto;
+		}
+
+		@media (max-width:980px){
+			.header-inner{align-items:flex-start}
+			.main-nav{
+				position:fixed;
+				right:12px;
+				top:72px;
+				background:var(--accent);
+				padding:12px;
+				border-radius:10px;
+				display:none;
+				flex-direction:column;
+				align-items:flex-start;
+				min-width:220px;
+				box-shadow:0 8px 24px rgba(0,0,0,.24);
+			}
+			.main-nav.open{display:flex}
+			.nav-toggle{display:block}
+			.hero-figure{width:300px;height:380px}
+			.frame,.frame--shadow{width:290px;height:380px}
+			.projects-grid{grid-template-columns:1fr}
+			.skills-grid{grid-template-columns:1fr}
+		}
+
+		@media (max-width:520px){
+			.container{padding:12px}
+			.brand h1{font-size:1.8rem}
+			.lead{font-size:1.08rem}
+			.hero{padding:18px}
+			.hero-visual{flex-direction:column-reverse;align-items:stretch}
+			.hero-figure{margin:0 auto}
+		}
+
+		@media (prefers-reduced-motion: reduce){
+			.bg-orb,.reveal,.intro-gate,.back-to-top{animation:none!important;transition:none!important}
+		}
+	</style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <h1 style="white-space:nowrap;">Krishnakumar&nbsp;P</h1>
-        <p class="role">Senior DevOps Engineer</p>
-        <p class="contact-inline"><a href="mailto:krish0337@gmail.com">krish0337@gmail.com</a></p>
-      </div>
+	<div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+	<div class="bg-orb bg-orb--one" aria-hidden="true"></div>
+	<div class="bg-orb bg-orb--two" aria-hidden="true"></div>
 
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+	<div id="introGate" class="intro-gate" aria-label="Intro screen">
+		<div class="intro-panel">
+			<p class="intro-kicker">Senior DevOps Engineer Portfolio</p>
+			<h2 id="introTyping" class="intro-title"></h2>
+			<p class="intro-sub">AWS • Kubernetes • CI/CD • Platform Reliability</p>
+			<button id="enterSiteBtn" class="intro-enter" type="button">Enter Portfolio</button>
+		</div>
+	</div>
 
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#hero">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#awards">Awards</a>
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
-        <a class="resume" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-      </nav>
-    </div>
-  </header>
+	<header class="site-header">
+		<div class="container header-inner">
+			<div class="brand">
+				<h1>Krishnakumar&nbsp;P</h1>
+				<p class="role">Senior DevOps Engineer</p>
+				<p class="contact-inline"><a href="mailto:krish0337@gmail.com">krish0337@gmail.com</a></p>
+			</div>
 
-  <main class="container">
-    <section id="hero" class="hero card hero-visual">
-      <div class="hero-content">
-        <h2>Hi, I'm Krishnakumar</h2>
-        <p class="lead">
-          Senior DevOps Engineer with 8+ years of experience in automation, CI/CD, cloud infrastructure,
-          and platform reliability. I build secure and scalable delivery systems on AWS and Kubernetes.
-        </p>
-        <p class="hero-links">
-          <a class="btn" href="https://www.linkedin.com/in/krishnakumar-p-1a1827114/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a class="btn" href="https://github.com/krish0337" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a class="btn" href="#contact">Get in touch</a>
-        </p>
-      </div>
+			<button class="nav-toggle" aria-label="Toggle navigation">☰</button>
 
-      <div class="hero-figure">
-        <div class="frame">
-          <img src="assets/kk.jpg" alt="Krishnakumar P" class="profile-photo" />
-        </div>
-        <div class="frame frame--shadow" aria-hidden="true"></div>
-      </div>
-    </section>
+			<nav class="main-nav" aria-label="Main navigation">
+				<a href="#hero">About</a>
+				<a href="#experience">Experience</a>
+				<a href="#projects">Projects</a>
+				<a href="#skills">Skills</a>
+				<a href="#awards">Awards</a>
+				<a href="#education">Education</a>
+				<a href="#certifications">Certifications</a>
+				<a href="#contact">Contact</a>
+				<a class="resume" href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+			</nav>
+		</div>
+	</header>
 
-    <section id="career-objectives" class="card">
-      <h3>CAREER OBJECTIVE</h3>
-      <p>
-        To contribute as a senior DevOps professional by building resilient cloud platforms, improving developer velocity,
-        and driving automation-first operations in high-impact engineering teams.
-      </p>
-    </section>
+	<main class="container">
+		<section id="hero" class="hero card hero-visual">
+			<div class="hero-content">
+				<h2>Hi, I'm Krishnakumar</h2>
+				<p class="lead">
+					Senior DevOps Engineer with 8+ years of experience in automation, CI/CD, cloud infrastructure,
+					and platform reliability. I build secure and scalable delivery systems on AWS and Kubernetes.
+				</p>
+				<p class="hero-links">
+					<a class="btn" href="https://www.linkedin.com/in/krishnakumar-p-1a1827114/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+					<a class="btn" href="https://github.com/krish0337" target="_blank" rel="noopener noreferrer">GitHub</a>
+					<a class="btn" href="#contact">Get in touch</a>
+				</p>
+			</div>
 
-    <section id="professional-summary" class="card">
-      <h3>PROFESSIONAL SUMMARY</h3>
-      <ul class="summary-list">
-        <li>8+ years in DevOps and cloud engineering with hands-on expertise in AWS, Kubernetes, Jenkins, GitHub Actions, Terraform, and Ansible.</li>
-        <li>Designed and deployed enterprise-scale infrastructure and CI/CD workflows that improved release speed and system reliability.</li>
-        <li>Implemented observability using Prometheus, Grafana, Splunk, and Datadog to reduce incident detection and recovery time.</li>
-        <li>Strong track record in automation, platform governance, and cross-team collaboration.</li>
-      </ul>
-    </section>
+			<div class="hero-figure">
+				<div class="frame">
+					<img src="assets/kk.jpg" alt="Krishnakumar P" class="profile-photo" />
+				</div>
+				<div class="frame frame--shadow" aria-hidden="true"></div>
+			</div>
+		</section>
 
-    <section id="skills" class="card">
-      <h3>SKILLS & ABILITIES</h3>
-      <ul class="skills-grid">
-        <li><strong>Operating Systems:</strong> Linux, Windows, macOS</li>
-        <li><strong>Version Control & Build:</strong> Git, Pip</li>
-        <li><strong>CI/CD Tools:</strong> Jenkins, GitHub Actions, AWS CodeBuild, GCP Cloud Build</li>
-        <li><strong>Infrastructure Automation:</strong> Terraform, Ansible, Pulumi, Apache Airflow</li>
-        <li><strong>Containers:</strong> Docker, Kubernetes</li>
-        <li><strong>Scripting:</strong> Shell scripting, Python</li>
-        <li><strong>Cloud Platforms:</strong> AWS, GCP</li>
-        <li><strong>Monitoring:</strong> Prometheus, Grafana, Splunk, Datadog</li>
-      </ul>
-    </section>
+		<section id="career-objectives" class="card">
+			<h3>CAREER OBJECTIVE</h3>
+			<p>
+				To contribute as a senior DevOps professional by building resilient cloud platforms, improving developer velocity,
+				and driving automation-first operations in high-impact engineering teams.
+			</p>
+		</section>
 
-    <section id="experience" class="card">
-      <h3>WORK EXPERIENCE</h3>
+		<section id="professional-summary" class="card">
+			<h3>PROFESSIONAL SUMMARY</h3>
+			<ul class="summary-list">
+				<li>8+ years in DevOps and cloud engineering with hands-on expertise in AWS, Kubernetes, Jenkins, GitHub Actions, Terraform, and Ansible.</li>
+				<li>Designed and deployed enterprise-scale infrastructure and CI/CD workflows that improved release speed and system reliability.</li>
+				<li>Implemented observability using Prometheus, Grafana, Splunk, and Datadog to reduce incident detection and recovery time.</li>
+				<li>Strong track record in automation, platform governance, and cross-team collaboration.</li>
+			</ul>
+		</section>
 
-      <article class="job">
-        <h4>Senior DevOps Engineer - Deloitte (Client: DEP)</h4>
-        <p class="meta">05/2022 - Present</p>
-        <ul>
-          <li>Provisioned and managed production-grade Kubernetes clusters across Dev, Stage, and Prod using GitOps and KMS integration.</li>
-          <li>Automated GitHub infrastructure for 10+ organizations using Pulumi, including team setup, repo controls, and CODEOWNERS policies.</li>
-          <li>Implemented end-to-end observability with Datadog, Prometheus, Grafana, and Airflow.</li>
-          <li>Built automation for environment cleanup, reducing infrastructure cost by 30%.</li>
-          <li>Created GitHub Actions workflows for onboarding, linting, testing, scheduling, and artifact migration.</li>
-        </ul>
-      </article>
+		<section id="skills" class="card">
+			<h3>SKILLS AND ABILITIES</h3>
+			<ul class="skills-grid">
+				<li><strong>Operating Systems:</strong> Linux, Windows, macOS</li>
+				<li><strong>Version Control and Build:</strong> Git, Pip</li>
+				<li><strong>CI/CD Tools:</strong> Jenkins, GitHub Actions, AWS CodeBuild, GCP Cloud Build</li>
+				<li><strong>Infrastructure Automation:</strong> Terraform, Ansible, Pulumi, Apache Airflow</li>
+				<li><strong>Containers:</strong> Docker, Kubernetes</li>
+				<li><strong>Scripting:</strong> Shell scripting, Python</li>
+				<li><strong>Cloud Platforms:</strong> AWS, GCP</li>
+				<li><strong>Monitoring:</strong> Prometheus, Grafana, Splunk, Datadog</li>
+			</ul>
+		</section>
 
-      <article class="job">
-        <h4>DevOps Engineer - Rakuten India (Rakuten-CDN / Rakuten Media Service)</h4>
-        <p class="meta">04/2021 - 05/2022</p>
-        <ul>
-          <li>Led DevOps release activities with development and product teams, including weekly and on-call production deployments.</li>
-          <li>Built CI/CD pipelines using Jenkins (Groovy), GitHub, and JFrog with blue/green deployment strategy.</li>
-          <li>Deployed and operated Dockerized microservices on Kubernetes across sandbox, staging, and production environments.</li>
-          <li>Managed AWS services including EC2, S3, IAM, CloudWatch, Route53, and Lambda.</li>
-        </ul>
-      </article>
+		<section id="experience" class="card">
+			<h3>WORK EXPERIENCE</h3>
 
-      <article class="job">
-        <h4>DevOps Engineer - CSS CORP</h4>
-        <p class="meta">10/2019 - 08/2022</p>
-        <p class="meta" style="color:#666;font-size:0.9em;margin-top:-10px;">Client: Nokia</p>
-        <ul>
-          <li>Automated build and deployment pipelines using Jenkins, Docker, and JFrog Artifactory.</li>
-          <li>Provisioned AWS infrastructure with Terraform and Ansible for repeatable deployments.</li>
-          <li>Managed Kubernetes workloads including Deployments, Services, ConfigMaps, and Cert-Manager.</li>
-          <li>Supported production RHEL servers and centralized log management through Splunk.</li>
-        </ul>
-      </article>
+			<article class="job">
+				<h4>Senior DevOps Engineer - Deloitte (Client: DEP)</h4>
+				<p class="meta">05/2022 - Present</p>
+				<ul>
+					<li>Provisioned and managed production-grade Kubernetes clusters across Dev, Stage, and Prod using GitOps and KMS integration.</li>
+					<li>Automated GitHub infrastructure for 10+ organizations using Pulumi, including team setup, repo controls, and CODEOWNERS policies.</li>
+					<li>Implemented end-to-end observability with Datadog, Prometheus, Grafana, and Airflow.</li>
+					<li>Built automation for environment cleanup, reducing infrastructure cost by 30%.</li>
+					<li>Created GitHub Actions workflows for onboarding, linting, testing, scheduling, and artifact migration.</li>
+				</ul>
+			</article>
 
-      <article class="job">
-        <h4>Engineer - SBA Info Solutions</h4>
-        <p class="meta">10/2018 - 04/2021</p>
-        <ul>
-          <li>Supported AWS operations including EC2, EBS, and EFS provisioning and maintenance.</li>
-          <li>Maintained Linux production servers (RHEL, SUSE, Ubuntu), troubleshooting and log analysis.</li>
-          <li>Configured Apache, Tomcat, MySQL, and SSL certificates for multiple environments.</li>
-        </ul>
-      </article>
-    </section>
+			<article class="job">
+				<h4>DevOps Engineer - Rakuten India (Rakuten-CDN / Rakuten Media Service)</h4>
+				<p class="meta">04/2021 - 05/2022</p>
+				<ul>
+					<li>Led DevOps release activities with development and product teams, including weekly and on-call production deployments.</li>
+					<li>Built CI/CD pipelines using Jenkins (Groovy), GitHub, and JFrog with blue/green deployment strategy.</li>
+					<li>Deployed and operated Dockerized microservices on Kubernetes across sandbox, staging, and production environments.</li>
+					<li>Managed AWS services including EC2, S3, IAM, CloudWatch, Route53, and Lambda.</li>
+				</ul>
+			</article>
 
-    <section id="projects" class="card">
-      <h3>PROJECTS (SELECTED)</h3>
-      <div class="projects-grid">
-        <div class="project">
-          <h4>Rakuten-CDN / Rakuten Media Service</h4>
-          <p>CI/CD automation, containerized deployments, and production monitoring for media delivery workloads.</p>
-        </div>
-        <div class="project">
-          <h4>Automation and Infra Cleanup Tools</h4>
-          <p>Automation scripts and IaC modules for snapshot/volume cleanup and safe environment decommissioning on AWS.</p>
-        </div>
-      </div>
-    </section>
+			<article class="job">
+				<h4>DevOps Engineer - CSS CORP</h4>
+				<p class="meta">10/2019 - 08/2022</p>
+				<p class="meta" style="color:#666;font-size:.9em;margin-top:-10px;">Client: Nokia</p>
+				<ul>
+					<li>Automated build and deployment pipelines using Jenkins, Docker, and JFrog Artifactory.</li>
+					<li>Provisioned AWS infrastructure with Terraform and Ansible for repeatable deployments.</li>
+					<li>Managed Kubernetes workloads including Deployments, Services, ConfigMaps, and Cert-Manager.</li>
+					<li>Supported production RHEL servers and centralized log management through Splunk.</li>
+				</ul>
+			</article>
 
-    <section id="awards" class="card">
-      <h3>AWARDS & RECOGNITION</h3>
-      <ul>
-        <li><strong>Applause and Outstanding Award:</strong> Recognized by leadership for delivery excellence.</li>
-        <li><strong>Client Appreciation:</strong> Acknowledged for automating infrastructure operations and reducing manual effort.</li>
-        <li><strong>Global Team Recognition:</strong> Appreciated by US teams for improving engineering workflows.</li>
-      </ul>
-    </section>
+			<article class="job">
+				<h4>Engineer - SBA Info Solutions</h4>
+				<p class="meta">10/2018 - 04/2021</p>
+				<ul>
+					<li>Supported AWS operations including EC2, EBS, and EFS provisioning and maintenance.</li>
+					<li>Maintained Linux production servers (RHEL, SUSE, Ubuntu), troubleshooting and log analysis.</li>
+					<li>Configured Apache, Tomcat, MySQL, and SSL certificates for multiple environments.</li>
+				</ul>
+			</article>
+		</section>
 
-    <section id="education" class="card">
-      <h3>EDUCATION</h3>
-      <ul>
-        <li>Bachelor of Engineering - Electronics & Communication Engineering, RIT College, Rajapalayam</li>
-      </ul>
-    </section>
+		<section id="projects" class="card">
+			<h3>PROJECTS (SELECTED)</h3>
+			<div class="projects-grid">
+				<div class="project">
+					<h4>Rakuten-CDN / Rakuten Media Service</h4>
+					<p>CI/CD automation, containerized deployments, and production monitoring for media delivery workloads.</p>
+				</div>
+				<div class="project">
+					<h4>Automation and Infra Cleanup Tools</h4>
+					<p>Automation scripts and IaC modules for snapshot/volume cleanup and safe environment decommissioning on AWS.</p>
+				</div>
+			</div>
+		</section>
 
-    <section id="certifications" class="card">
-      <h3>TRAININGS & CERTIFICATIONS</h3>
-      <ul class="cert-list">
-        <li>AWS Certified Solutions Architect - Associate</li>
-        <li>Certified Kubernetes Administrator (CKA)</li>
-        <li>Terraform Certified Associate</li>
-      </ul>
-    </section>
+		<section id="awards" class="card">
+			<h3>AWARDS AND RECOGNITION</h3>
+			<ul>
+				<li><strong>Applause and Outstanding Award:</strong> Recognized by leadership for delivery excellence.</li>
+				<li><strong>Client Appreciation:</strong> Acknowledged for automating infrastructure operations and reducing manual effort.</li>
+				<li><strong>Global Team Recognition:</strong> Appreciated by US teams for improving engineering workflows.</li>
+			</ul>
+		</section>
 
-    <section id="contact" class="card">
-      <h3>CONTACT</h3>
-      <p><strong>KRISHNAKUMAR P</strong></p>
-      <p>Email: <a href="mailto:krish0337@gmail.com">krish0337@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/krishnakumar-p-1a1827114/" target="_blank" rel="noopener noreferrer">krishnakumar-p</a></p>
-      <p>GitHub: <a href="https://github.com/krish0337" target="_blank" rel="noopener noreferrer">krish0337</a></p>
-    </section>
-  </main>
+		<section id="education" class="card">
+			<h3>EDUCATION</h3>
+			<ul>
+				<li>Bachelor of Engineering - Electronics and Communication Engineering, RIT College, Rajapalayam</li>
+			</ul>
+		</section>
 
-  <footer class="site-footer">
-    <div class="container"><p>© 2026 Krishnakumar P - Senior DevOps Engineer</p></div>
-  </footer>
+		<section id="certifications" class="card">
+			<h3>TRAININGS AND CERTIFICATIONS</h3>
+			<ul class="cert-list">
+				<li>AWS Certified Solutions Architect - Associate</li>
+				<li>Certified Kubernetes Administrator (CKA)</li>
+				<li>Terraform Certified Associate</li>
+			</ul>
+		</section>
 
-  <script src="js/main.js"></script>
+		<section id="contact" class="card">
+			<h3>CONTACT</h3>
+			<p><strong>KRISHNAKUMAR P</strong></p>
+			<p>Email: <a href="mailto:krish0337@gmail.com">krish0337@gmail.com</a></p>
+			<p>LinkedIn: <a href="https://www.linkedin.com/in/krishnakumar-p-1a1827114/" target="_blank" rel="noopener noreferrer">krishnakumar-p</a></p>
+			<p>GitHub: <a href="https://github.com/krish0337" target="_blank" rel="noopener noreferrer">krish0337</a></p>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container"><p>© 2026 Krishnakumar P - Senior DevOps Engineer</p></div>
+	</footer>
+
+	<button id="backToTop" class="back-to-top" aria-label="Back to top" type="button">↑</button>
+
+	<script>
+		(function(){
+			var btn = document.querySelector(".nav-toggle");
+			var nav = document.querySelector(".main-nav");
+			if(btn && nav){
+				btn.addEventListener("click", function(){
+					nav.classList.toggle("open");
+				});
+			}
+
+			document.querySelectorAll('a[href^="#"]').forEach(function(a){
+				a.addEventListener("click", function(e){
+					var href = a.getAttribute("href");
+					if(!href || href === "#"){ return; }
+					var target = document.querySelector(href);
+					if(target){
+						e.preventDefault();
+						target.scrollIntoView({ behavior:"smooth", block:"start" });
+						if(nav){ nav.classList.remove("open"); }
+					}
+				});
+			});
+
+			var introGate = document.getElementById("introGate");
+			var introTyping = document.getElementById("introTyping");
+			var enterBtn = document.getElementById("enterSiteBtn");
+			var progress = document.getElementById("scrollProgress");
+			var backToTop = document.getElementById("backToTop");
+
+			var text = "Krishnakumar P";
+			var i = 0;
+			function typeNext(){
+				if(!introTyping || i > text.length){ return; }
+				introTyping.textContent = text.slice(0, i);
+				i += 1;
+				if(i <= text.length){
+					setTimeout(typeNext, 70);
+				}
+			}
+			typeNext();
+
+			function closeIntro(){
+				if(!introGate){ return; }
+				introGate.classList.add("is-hidden");
+				document.body.style.overflow = "";
+			}
+
+			if(introGate){
+				document.body.style.overflow = "hidden";
+				setTimeout(closeIntro, 2400);
+			}
+			if(enterBtn){
+				enterBtn.addEventListener("click", closeIntro);
+			}
+
+			var revealTargets = document.querySelectorAll(".hero, .card, .job, .project");
+			revealTargets.forEach(function(el){ el.classList.add("reveal"); });
+
+			var observer = new IntersectionObserver(function(entries){
+				entries.forEach(function(entry){
+					if(entry.isIntersecting){
+						entry.target.classList.add("reveal-in");
+						observer.unobserve(entry.target);
+					}
+				});
+			}, { threshold:0.12 });
+
+			revealTargets.forEach(function(el){ observer.observe(el); });
+
+			function onScroll(){
+				var doc = document.documentElement;
+				var scrollTop = doc.scrollTop || document.body.scrollTop;
+				var max = doc.scrollHeight - doc.clientHeight;
+				var ratio = max > 0 ? (scrollTop / max) * 100 : 0;
+				if(progress){ progress.style.width = ratio + "%"; }
+
+				if(backToTop){
+					if(scrollTop > 320){ backToTop.classList.add("show"); }
+					else{ backToTop.classList.remove("show"); }
+				}
+			}
+
+			window.addEventListener("scroll", onScroll, { passive:true });
+			onScroll();
+
+			if(backToTop){
+				backToTop.addEventListener("click", function(){
+					window.scrollTo({ top:0, behavior:"smooth" });
+				});
+			}
+		})();
+	</script>
 </body>
 </html>
