@@ -136,6 +136,42 @@
 			margin:0 0 10px 0;
 			font-size:2.1rem;
 			line-height:1.2;
+			display:flex;
+			flex-wrap:wrap;
+			gap:0.1em;
+		}
+
+		.hero h2 span{
+			display:inline-block;
+			opacity:0;
+			animation:charBounce .6s ease forwards;
+		}
+
+		.hero h2 span:nth-child(1){ animation-delay:0s }
+		.hero h2 span:nth-child(2){ animation-delay:.06s }
+		.hero h2 span:nth-child(3){ animation-delay:.12s }
+		.hero h2 span:nth-child(4){ animation-delay:.18s }
+		.hero h2 span:nth-child(5){ animation-delay:.24s }
+		.hero h2 span:nth-child(6){ animation-delay:.3s }
+		.hero h2 span:nth-child(7){ animation-delay:.36s }
+		.hero h2 span:nth-child(8){ animation-delay:.42s }
+		.hero h2 span:nth-child(9){ animation-delay:.48s }
+		.hero h2 span:nth-child(10){ animation-delay:.54s }
+		.hero h2 span:nth-child(11){ animation-delay:.6s }
+		.hero h2 span:nth-child(12){ animation-delay:.66s }
+		.hero h2 span:nth-child(13){ animation-delay:.72s }
+		.hero h2 span:nth-child(14){ animation-delay:.78s }
+		.hero h2 span:nth-child(15){ animation-delay:.84s }
+		.hero h2 span:nth-child(16){ animation-delay:.9s }
+		.hero h2 span:nth-child(17){ animation-delay:.96s }
+		.hero h2 span:nth-child(18){ animation-delay:1.02s }
+		.hero h2 span:nth-child(19){ animation-delay:1.08s }
+		.hero h2 span:nth-child(20){ animation-delay:1.14s }
+		.hero h2 span:nth-child(21){ animation-delay:1.2s }
+
+		@keyframes charBounce{
+			0%{ opacity:0; transform:translateY(20px) }
+			100%{ opacity:1; transform:translateY(0) }
 		}
 
 		.lead{
@@ -172,6 +208,12 @@
 			display:flex;
 			align-items:center;
 			justify-content:center;
+			animation:photoFloat 3.2s ease-in-out infinite;
+		}
+
+		@keyframes photoFloat{
+			0%,100%{ transform:translateY(0) }
+			50%{ transform:translateY(-12px) }
 		}
 
 		.frame{
@@ -216,9 +258,63 @@
 		.card h3{
 			margin:0 0 12px;
 			letter-spacing:.2px;
+			opacity:0;
+			animation:titleSlideUp .5s ease forwards;
 		}
 
-		.summary-list li{margin:8px 0}
+		@keyframes titleSlideUp{
+			from{ opacity:0; transform:translateY(12px) }
+			to{ opacity:1; transform:translateY(0) }
+		}
+
+		.summary-list li{
+			margin:8px 0;
+			opacity:0;
+			animation:listItemReveal .5s ease forwards;
+		}
+
+		.summary-list li:nth-child(1){ animation-delay:.1s }
+		.summary-list li:nth-child(2){ animation-delay:.2s }
+		.summary-list li:nth-child(3){ animation-delay:.3s }
+		.summary-list li:nth-child(4){ animation-delay:.4s }
+
+		@keyframes listItemReveal{
+			from{ opacity:0; transform:translateX(-16px) }
+			to{ opacity:1; transform:translateX(0) }
+		}
+
+		#awards ul li{
+			opacity:0;
+			animation:awardsReveal .5s ease forwards;
+			position:relative;
+			padding-left:12px;
+		}
+
+		#awards ul li:nth-child(1){ animation-delay:.1s }
+		#awards ul li:nth-child(2){ animation-delay:.2s }
+		#awards ul li:nth-child(3){ animation-delay:.3s }
+
+		#awards ul li::before{
+			content:'⭐';
+			margin-right:8px;
+			display:inline-block;
+			animation:starSpin .6s ease;
+			animation-fill-mode:both;
+		}
+
+		#awards ul li:nth-child(1)::before{ animation-delay:.1s }
+		#awards ul li:nth-child(2)::before{ animation-delay:.2s }
+		#awards ul li:nth-child(3)::before{ animation-delay:.3s }
+
+		@keyframes awardsReveal{
+			from{ opacity:0; transform:translateX(-16px) }
+			to{ opacity:1; transform:translateX(0) }
+		}
+
+		@keyframes starSpin{
+			0%{ transform:rotate(-180deg) scale(0) }
+			100%{ transform:rotate(0) scale(1) }
+		}
 
 		.skills-grid{
 			list-style:none;
@@ -235,6 +331,22 @@
 			border-radius:10px;
 			padding:10px 12px;
 			font-weight:600;
+			opacity:0;
+			animation:skillsSlideIn .5s ease forwards;
+		}
+
+		.skills-grid li:nth-child(1){ animation-delay:0s }
+		.skills-grid li:nth-child(2){ animation-delay:.1s }
+		.skills-grid li:nth-child(3){ animation-delay:.2s }
+		.skills-grid li:nth-child(4){ animation-delay:.3s }
+		.skills-grid li:nth-child(5){ animation-delay:.4s }
+		.skills-grid li:nth-child(6){ animation-delay:.5s }
+		.skills-grid li:nth-child(7){ animation-delay:.6s }
+		.skills-grid li:nth-child(8){ animation-delay:.7s }
+
+		@keyframes skillsSlideIn{
+			from{ opacity:0; transform:scale(.9) }
+			to{ opacity:1; transform:scale(1) }
 		}
 
 		.job{margin:14px 0}
@@ -596,7 +708,7 @@
 	<main class="container">
 		<section id="hero" class="hero card hero-visual">
 			<div class="hero-content">
-				<h2>Hi I'm Krishnakumar P</h2>
+				<h2><span>H</span><span>i</span><span>&nbsp;</span><span>I</span><span>'</span><span>m</span><span>&nbsp;</span><span>K</span><span>r</span><span>i</span><span>s</span><span>h</span><span>n</span><span>a</span><span>k</span><span>u</span><span>m</span><span>a</span><span>r</span><span>&nbsp;</span><span>P</span></h2>
 				<p class="lead">
 					DevOps professional with 8+ years of hands-on experience in CI/CD automation, Kubernetes operations, AWS cloud architecture, and Infrastructure as Code using Terraform and Ansible.
 					Hands-on experience with GitOps workflows, observability stacks (Prometheus, Grafana, Splunk, Datadog), and production reliability practices that reduce deployment risk and improve release velocity.
@@ -714,7 +826,7 @@
 		</section>
 
 		<section id="certifications" class="card">
-			<h3>TRAININGS AND CERTIFICATIONS</h3>
+			<h3>CERTIFICATIONS</h3>
 			<ul class="cert-list">
 				<li><img src="assets/aws.png" alt="AWS Certified Solutions Architect"/> AWS Certified Solutions Architect - Associate</li>
 				<li><img src="assets/cka.png" alt="Certified Kubernetes Administrator"/> Certified Kubernetes Administrator (CKA)</li>
